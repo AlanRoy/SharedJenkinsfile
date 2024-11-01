@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Demo') {
             steps {
-                hello 'Alex'
+                hello "${BUILD_USER}"
             }
         }
         
