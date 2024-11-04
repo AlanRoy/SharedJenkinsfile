@@ -9,18 +9,30 @@ pipeline {
     }
     
     stages {
-        stage('Demo') {
+        stage('Saludo') {
             steps {
                 hello "${env.BUILD_USER}"
             }
         }
         
-        stage('Variables') {
+        stage('Var Function') {
             steps {
                 script {
                     echo varList.equipoFutbol()
                     echo varList.equipoBasket()
                     echo varList.sistemaOperativo()
+                }
+                
+            }
+        }
+
+        stage('Var List') {
+            steps {
+                script {
+                    echo status.FUTBOL
+                    echo status.SYSTEM
+                    echo status.SERIE
+                    echo status.LAPTOP
                 }
                 
             }
