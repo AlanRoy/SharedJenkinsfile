@@ -22,27 +22,31 @@ pipeline {
                 }
             }
         }
-        
-        stage('Var Function') {
-            steps {
-                script {
-                    echo varList.equipoFutbol()
-                    echo varList.equipoBasket()
-                    echo varList.sistemaOperativo()
-                }
-                
-            }
-        }
 
-        stage('Var List') {
-            steps {
-                script {
-                    echo global.FUTBOL
-                    echo global.SYSTEM
-                    echo global.SERIE
-                    echo global.LAPTOP
+        stage('Variables') {
+            parallel {
+                stage('Var Function') {
+                    steps {
+                        script {
+                            echo varList.equipoFutbol()
+                            echo varList.equipoBasket()
+                            echo varList.sistemaOperativo()
+                        }
+                        
+                    }
                 }
-                
+
+                stage('Var List') {
+                    steps {
+                        script {
+                            echo global.FUTBOL
+                            echo global.SYSTEM
+                            echo global.SERIE
+                            echo global.LAPTOP
+                        }
+                        
+                    }
+                }
             }
         }
     }
