@@ -17,7 +17,9 @@ pipeline {
 
         stage('Build Job') {
             steps {
-                build job: 'Ejercicio_3'   
+                script {
+                    buildJob("Ejercicio_3")
+                }
             }
         }
         
