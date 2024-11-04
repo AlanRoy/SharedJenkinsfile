@@ -29,10 +29,10 @@ pipeline {
         stage('Var List') {
             steps {
                 script {
-                    echo status.FUTBOL
-                    echo status.SYSTEM
-                    echo status.SERIE
-                    echo status.LAPTOP
+                    echo global.FUTBOL
+                    echo global.SYSTEM
+                    echo global.SERIE
+                    echo global.LAPTOP
                 }
                 
             }
