@@ -14,6 +14,12 @@ pipeline {
                 hello "${env.BUILD_USER}"
             }
         }
+
+        stage('Build Job') {
+            steps {
+                build job: 'Ejercicio_3'   
+            }
+        }
         
         stage('Var Function') {
             steps {
