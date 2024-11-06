@@ -2,6 +2,4 @@
 
 bootstrap {
 	type = "ejercicio52"
-
-	//nuevoNombre = params.nuevo_nombre
 }
