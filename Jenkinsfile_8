@@ -1,0 +1,5 @@
+@Library('my-shared-library') _
+
+bootstrapCron {
+	type = "ejercicio6"
+}
